@@ -1,0 +1,176 @@
+/* ⚜️ BOOKSHELF APP - Royal Gold Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+  color: #f8f5e6;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* 👑 HEADER */
+header {
+  background: linear-gradient(135deg, #b99309, #f1c232);
+  color: #1a1a1a;
+  padding: 25px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* 📦 MAIN CONTENT */
+main {
+  padding: 40px 10%;
+}
+
+section {
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  transition: 0.3s;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #f7d358;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* 🧾 FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+label {
+  font-weight: 500;
+  color: #f5e6a4;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #b99309;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: gold;
+  cursor: pointer;
+}
+
+/* 🔘 BUTTONS */
+button {
+  background: linear-gradient(135deg, #c5a100, #f1c232);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffd700, #ffeb99);
+  transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* 📚 BOOK LISTS */
+#incompleteBookList, 
+#completeBookList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 🎴 BOOK CARD */
+[data-testid="bookItem"] {
+  background: linear-gradient(145deg, #262626, #1e1e1e);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  width: 240px;
+  text-align: left;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+[data-testid="bookItem"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+/* 📘 BOOK TEXTS */
+[data-testid="bookItemTitle"] {
+  color: #f7d358;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+[data-testid="bookItemAuthor"],
+[data-testid="bookItemYear"] {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* 📲 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  [data-testid="bookItem"] {
+    width: 90%;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    width: 95%;
+  }
+}
